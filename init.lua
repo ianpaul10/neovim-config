@@ -193,6 +193,11 @@ vim.keymap.set('n', '<C-l>', '<C-w><C-l>', { desc = 'Move focus to the right win
 vim.keymap.set('n', '<C-j>', '<C-w><C-j>', { desc = 'Move focus to the lower window' })
 vim.keymap.set('n', '<C-k>', '<C-w><C-k>', { desc = 'Move focus to the upper window' })
 
+-- [[ Shortcuts for switching between buffers ]]
+vim.keymap.set('n', 'gn', ':bnext', { desc = 'Switch to the next buffer (i.e. file)' })
+vim.keymap.set('n', 'gp', ':bprevious', { desc = 'Switch to the previous buffer (i.e. file)' })
+vim.keymap.set('n', 'gq', ':bdelete', { desc = 'Close the current buffer (i.e. file)' })
+
 -- [[ Basic Autocommands ]]
 --  See `:help lua-guide-autocommands`
 
