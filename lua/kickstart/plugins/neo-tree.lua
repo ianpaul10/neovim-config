@@ -20,13 +20,11 @@ return {
           ['\\'] = 'close_window',
         },
       },
-    },
-  },
-  filesystem = {
-    filtered_items = {
-      hide_dotfiles = false,
-      hide_gitignored = false,
-      hide_hiddenn = false,
+      filtered_items = {
+        hide_dotfiles = false,
+        hide_gitignored = false,
+        hide_hiddenn = false,
+      },
     },
   },
 }
