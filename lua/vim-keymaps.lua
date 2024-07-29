@@ -38,6 +38,11 @@ vim.keymap.set('n', 'gn', ':bnext', { desc = 'Switch to the next buffer (i.e. fi
 vim.keymap.set('n', 'gp', ':bprevious', { desc = 'Switch to the previous buffer (i.e. file)' })
 vim.keymap.set('n', 'gq', ':bdelete', { desc = 'Close the current buffer (i.e. file)' })
 
+
+-- Remove keymap of s for vim in favour of mini.nvim mini.surround
+vim.keymap.set('n', 's', '<Nop>', { desc = 'Ignore default [s] keymap in favour of mini.nvim mini.surround'})
+
+
 -- [[ Basic Autocommands ]]
 --  See `:help lua-guide-autocommands`
 
