@@ -165,6 +165,8 @@ return { -- LSP Configuration & Plugins
       -- clangd = {},
       -- gopls = {},
       pyright = {},
+      dockerls = {},
+      eslint = {},
       -- ruff = {},
       -- ruff_lsp = {},
       -- rust_analyzer = {},

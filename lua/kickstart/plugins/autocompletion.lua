@@ -33,6 +33,9 @@ return { -- Autocompletion
     --  into multiple repos for maintenance purposes.
     'hrsh7th/cmp-nvim-lsp',
     'hrsh7th/cmp-path',
+    'hrsh7th/cmp-buffer',
+    'hrsh7th/cmp-cmdline',
+    'hrsh7th/nvim-cmp',
   },
   config = function()
     -- See `:help cmp`
@@ -69,7 +72,7 @@ return { -- Autocompletion
 
         -- If you prefer more traditional completion keymaps,
         -- you can uncomment the following lines
-        ['<CR>'] = cmp.mapping.confirm { select = true },
+        ['<CR>'] = cmp.mapping.confirm { select = true }, -- <CR> means caraige return, i.e. Enter
         ['<Tab>'] = cmp.mapping.select_next_item(),
         ['<S-Tab>'] = cmp.mapping.select_prev_item(),
 
