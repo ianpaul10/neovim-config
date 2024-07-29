@@ -22,20 +22,22 @@ require('lazy').setup({
   require 'kickstart.plugins.mini-vim',
 
   require 'kickstart.plugins.debug',
-  require 'kickstart.plugins.indent_line',
+  -- require 'kickstart.plugins.indent_line', -- excluding for now to test out.
   -- require 'kickstart.plugins.lint',
   require 'kickstart.plugins.autopairs',
   require 'kickstart.plugins.neo-tree',
-  require 'kickstart.plugins.gitsigns', -- adds gitsigns recommend keymaps
+  -- require 'kickstart.plugins.gitsigns', -- excluding for now. Don't love the keymaps
 
   require 'kickstart.plugins.telescope',
   require 'kickstart.plugins.tree-sitter',
 
-  'tpope/vim-sleuth', -- Detect tabstop and shiftwidth automatically
+  -- 'tpope/vim-sleuth', -- Detect tabstop and shiftwidth automatically
   'ryanoasis/vim-devicons',
 
   -- NOTE: Custom plugins
   require 'custom.plugins.harpoon',
+  require 'custom.plugins.undo-tree',
+  require 'custom.plugins.fugitive',
 }, {
   ui = {
     -- If you are using a Nerd Font: set icons to an empty table which will use the
