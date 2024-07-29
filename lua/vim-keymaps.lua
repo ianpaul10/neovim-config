@@ -19,10 +19,10 @@ vim.diagnostic.config { virtual_text = false }
 vim.keymap.set('t', '<Esc><Esc>', '<C-\\><C-n>', { desc = 'Exit terminal mode' })
 
 -- TIP: Disable arrow keys in normal mode
--- vim.keymap.set('n', '<left>', '<cmd>echo "Use h to move!!"<CR>')
--- vim.keymap.set('n', '<right>', '<cmd>echo "Use l to move!!"<CR>')
--- vim.keymap.set('n', '<up>', '<cmd>echo "Use k to move!!"<CR>')
--- vim.keymap.set('n', '<down>', '<cmd>echo "Use j to move!!"<CR>')
+vim.keymap.set('n', '<left>', '<cmd>echo "Use h to move!!"<CR>')
+vim.keymap.set('n', '<right>', '<cmd>echo "Use l to move!!"<CR>')
+vim.keymap.set('n', '<up>', '<cmd>echo "Use k to move!!"<CR>')
+vim.keymap.set('n', '<down>', '<cmd>echo "Use j to move!!"<CR>')
 
 -- Keybinds to make split navigation easier.
 --  Use CTRL+<hjkl> to switch between windows
@@ -38,10 +38,21 @@ vim.keymap.set('n', 'gn', ':bnext', { desc = 'Switch to the next buffer (i.e. fi
 vim.keymap.set('n', 'gp', ':bprevious', { desc = 'Switch to the previous buffer (i.e. file)' })
 vim.keymap.set('n', 'gq', ':bdelete', { desc = 'Close the current buffer (i.e. file)' })
 
-
 -- Remove keymap of s for vim in favour of mini.nvim mini.surround
-vim.keymap.set('n', 's', '<Nop>', { desc = 'Ignore default [s] keymap in favour of mini.nvim mini.surround'})
+-- Acltually not remvoing for now. Not worrying about mini.surround ATM
+-- vim.keymap.set('n', 's', '<Nop>', { desc = 'Ignore default [s] keymap in favour of mini.nvim mini.surround' })
 
+-- When highlighted, you can move text around the buffer
+vim.keymap.set('v', 'K', ":m '<-2<CR>gv=gv'", { desc = 'Move highlighted text up or down' })
+vim.keymap.set('v', 'J', ":m '>+1<CR>gv=gv'", { desc = 'Move highlighted text up or down' })
+
+-- For jumping up and down the file, keep cursor in middle of the screen
+vim.keymap.set('n', '<C-d>', '<C-d>zz', { desc = 'Keep cursor in middle when jumping up/down' })
+vim.keymap.set('n', '<C-u>', '<C-u>zz', { desc = 'Keep cursor in middle when jumping up/down' })
+
+-- When filtering through searched words in the doc, always keep searched term in middle of screen
+vim.keymap.set('n', 'n', 'nzzzv')
+vim.keymap.set('n', 'N', 'Nzzzv')
 
 -- [[ Basic Autocommands ]]
 --  See `:help lua-guide-autocommands`
