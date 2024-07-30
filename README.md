@@ -1,5 +1,11 @@
 # kickstart.nvim
 
+IP's personal neovim configuration.
+
+Inspired and forked from [nvim-lua/kickstart.nvim](https://github.com/nvim-lua/kickstart.nvim).
+
+Everything below is from the original README.
+
 ## Introduction
 
 A starting point for Neovim that is:
