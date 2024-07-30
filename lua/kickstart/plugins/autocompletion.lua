@@ -116,7 +116,7 @@ return { -- Autocompletion
         { name = 'nvim_lsp' },
         { name = 'luasnip' },
         { name = 'path' },
-        { name = 'supermaven' },
+        -- { name = 'supermaven' }, -- Let's remove it from the cmp list, and just have it inline for now.
       },
     }
   end,
