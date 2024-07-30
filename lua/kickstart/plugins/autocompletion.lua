@@ -42,7 +42,6 @@ return { -- Autocompletion
     local cmp = require 'cmp'
     local luasnip = require 'luasnip'
     luasnip.config.setup {}
-
     cmp.setup {
       snippet = {
         expand = function(args)
@@ -80,6 +79,9 @@ return { -- Autocompletion
         --  Generally you don't need this, because nvim-cmp will display
         --  completions whenever it has completion options available.
         ['<C-Space>'] = cmp.mapping.complete {},
+
+        -- abort completion
+        ['<C-e>'] = cmp.mapping.abort(),
 
         -- NOTE: IP: I don't think the below works properly, so removing for now
         --
