@@ -164,7 +164,8 @@ return { -- LSP Configuration & Plugins
     local servers = {
       -- clangd = {},
       -- gopls = {},
-      pyright = {},
+      -- pyright = {},
+      ruff_lsp = {},
       dockerls = {},
       eslint = {},
       -- ruff = {},
