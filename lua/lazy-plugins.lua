@@ -26,7 +26,7 @@ require('lazy').setup({
   -- require 'kickstart.plugins.lint',
   require 'kickstart.plugins.autopairs',
   require 'kickstart.plugins.neo-tree',
-  -- require 'kickstart.plugins.gitsigns', -- excluding for now. Don't love the keymaps
+  require 'kickstart.plugins.gitsigns',
 
   require 'kickstart.plugins.telescope',
   require 'kickstart.plugins.tree-sitter',
@@ -37,7 +37,7 @@ require('lazy').setup({
   -- NOTE: Custom plugins
   require 'custom.plugins.harpoon',
   require 'custom.plugins.undo-tree',
-  require 'custom.plugins.fugitive',
+  -- require 'custom.plugins.fugitive',
   require 'custom.plugins.supermaven',
 }, {
   ui = {
