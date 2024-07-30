@@ -1,4 +1,4 @@
-local tokyo = { -- You can easily change to a different colorscheme.
+return { -- You can easily change to a different colorscheme.
   -- Change the name of the colorscheme plugin below, and then
   -- change the command in the config to whatever the name of that colorscheme is.
   --
@@ -16,15 +16,13 @@ local tokyo = { -- You can easily change to a different colorscheme.
   end,
 }
 
-local night_owl = {
-  'oxfist/night-owl.nvim',
-  lazy = false, -- make sure we load this during startup if it is your main colorscheme
-  priority = 1000, -- make sure to load this before all the other start plugins
-  config = function()
-    -- load the colorscheme here
-    require('night-owl').setup()
-    vim.cmd.colorscheme 'night-owl'
-  end,
-}
-
-return tokyo
+-- local night_owl = {
+--   'oxfist/night-owl.nvim',
+--   lazy = false, -- make sure we load this during startup if it is your main colorscheme
+--   priority = 1000, -- make sure to load this before all the other start plugins
+--   config = function()
+--     -- load the colorscheme here
+--     require('night-owl').setup()
+--     vim.cmd.colorscheme 'night-owl'
+--   end,
+-- }
