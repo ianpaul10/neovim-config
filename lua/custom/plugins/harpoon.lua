@@ -60,5 +60,19 @@ return {
       end,
       desc = 'harpoon to file 5',
     },
+    {
+      '<leader>an',
+      function()
+        require('harpoon'):list():next()
+      end,
+      desc = 'h[A]rpoon [N]ext file',
+    },
+    {
+      '<leader>ap',
+      function()
+        require('harpoon'):list():prev()
+      end,
+      desc = 'h[A]rpoon [P]revious file',
+    },
   },
 }
