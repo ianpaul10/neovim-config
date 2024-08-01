@@ -22,7 +22,7 @@ require('lazy').setup({
   require 'kickstart.plugins.mini-vim',
 
   require 'kickstart.plugins.debug',
-  -- require 'kickstart.plugins.indent_line', -- excluding for now to test out.
+  require 'kickstart.plugins.indent_line', -- excluding for now to test out.
   -- require 'kickstart.plugins.lint',
   require 'kickstart.plugins.autopairs',
   require 'kickstart.plugins.neo-tree',
@@ -37,7 +37,7 @@ require('lazy').setup({
   -- NOTE: Custom plugins
   require 'custom.plugins.harpoon',
   require 'custom.plugins.undo-tree',
-  -- require 'custom.plugins.fugitive',
+  require 'custom.plugins.fugitive',
   require 'custom.plugins.supermaven',
 }, {
   ui = {

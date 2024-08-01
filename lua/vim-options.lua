@@ -24,6 +24,11 @@ vim.opt.clipboard = 'unnamedplus'
 -- Enable break indent
 vim.opt.breakindent = true
 
+-- Indentation
+vim.opt.smartindent = true
+vim.opt.autoindent = true
+vim.opt.smarttab = true
+
 -- Save undo history
 vim.opt.undofile = true
 
@@ -67,4 +72,3 @@ vim.opt.scrolloff = 20
 vim.opt.hlsearch = true
 
 vim.opt.termguicolors = true
-
