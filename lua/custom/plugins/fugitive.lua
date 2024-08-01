@@ -4,7 +4,7 @@ return {
     {
       '<leader>gs',
       vim.cmd.Git,
-      desc = '[G]it [S]tatus',
+      desc = '[G]it [s]tatus',
     },
   },
 }
