@@ -1,3 +1,9 @@
+local header_art = [[
+ ╭╮╭┬─╮╭─╮┬  ┬┬╭┬╮
+ │││├┤ │ │╰┐┌╯││││
+ ╯╰╯╰─╯╰─╯ ╰╯ ┴┴ ┴
+]]
+
 return { -- Collection of various small independent plugins/modules
   'echasnovski/mini.nvim',
   config = function()
@@ -23,9 +29,6 @@ return { -- Collection of various small independent plugins/modules
     -- set use_icons to true if you have a Nerd Font
     statusline.setup { use_icons = vim.g.have_nerd_font }
 
-    require('mini.tabline').setup()
-    require('mini.icons').setup()
-
     -- You can configure sections in the statusline by overriding their
     -- default behavior. For example, here we set the section for
     -- cursor location to LINE:COLUMN
@@ -33,6 +36,17 @@ return { -- Collection of various small independent plugins/modules
     statusline.section_location = function()
       return '%2l:%-2v'
     end
+
+    require('mini.tabline').setup()
+    require('mini.icons').setup()
+    require('mini.starter').setup { header = header_art }
+
+    require('mini.sessions').setup { autoread = false, autowrite = true, directory = '~/.config/nvim/sessions' }
+    local write_as_cwd = function()
+      local session_name = vim.fn.getcwd():gsub('/Users/ianpaul/', ''):gsub('/', '_')
+      MiniSessions.write(session_name)
+    end
+    vim.keymap.set('n', '<Leader>ww', write_as_cwd, { desc = '[W]rite [W]orking directory to a session' })
 
     -- ... and there is more!
     --  Check out: https://github.com/echasnovski/mini.nvim
