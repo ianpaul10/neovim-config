@@ -39,15 +39,15 @@ return { -- Collection of various small independent plugins/modules
 
     require('mini.tabline').setup()
     require('mini.icons').setup()
-    require('mini.starter').setup { header = header_art }
 
-    require('mini.sessions').setup { autoread = false, autowrite = true, directory = '~/.config/nvim/sessions' }
+    require('mini.sessions').setup { autoread = false, autowrite = true, directory = '~/.neovim_sessions' }
     local write_as_cwd = function()
-      local session_name = vim.fn.getcwd():gsub('/Users/ianpaul/', ''):gsub('/', '_')
+      local session_name = vim.fn.getcwd():gsub('/Users/ianpaul/', ''):gsub('/', '_'):gsub('%.', '')
       MiniSessions.write(session_name)
     end
-    vim.keymap.set('n', '<Leader>ww', write_as_cwd, { desc = '[W]rite [W]orking directory to a session' })
+    vim.keymap.set('n', '<Leader>ww', write_as_cwd, { desc = '[W]rite [W]orkspace to a session' })
 
+    require('mini.starter').setup { header = header_art }
     -- ... and there is more!
     --  Check out: https://github.com/echasnovski/mini.nvim
   end,
