@@ -74,5 +74,47 @@ return {
       end,
       desc = 'h[A]rpoon [P]revious file',
     },
+    {
+      '<leader>aq1',
+      function()
+        require('harpoon'):list():remove_at(1)
+      end,
+      desc = 'h[A]rpoon [Q]uit file [1]',
+    },
+    {
+      '<leader>aq2',
+      function()
+        require('harpoon'):list():remove_at(2)
+      end,
+      desc = 'h[A]rpoon [Q]uit file [2]',
+    },
+    {
+      '<leader>aq3',
+      function()
+        require('harpoon'):list():remove_at(3)
+      end,
+      desc = 'h[A]rpoon [Q]uit file [3]',
+    },
+    {
+      '<leader>aq4',
+      function()
+        require('harpoon'):list():remove_at(4)
+      end,
+      desc = 'h[A]rpoon [Q]uit file [4]',
+    },
+    {
+      '<leader>aq5',
+      function()
+        require('harpoon'):list():remove_at(5)
+      end,
+      desc = 'h[A]rpoon [Q]uit file [5]',
+    },
+    {
+      '<leader>aqa',
+      function()
+        require('harpoon'):list():clear()
+      end,
+      desc = 'h[A]rpoon [Q]uit [A]ll files',
+    },
   },
 }
