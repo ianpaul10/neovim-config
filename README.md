@@ -1,4 +1,4 @@
-# kickstart.nvim
+# neovim-config
 
 IP's personal neovim configuration.
 
