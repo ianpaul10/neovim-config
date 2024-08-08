@@ -61,6 +61,7 @@ return { -- Collection of various small independent plugins/modules
 
     require('mini.starter').setup { header = header_art_2 }
     require('mini.pairs').setup()
+    require('mini.jump').setup()
     -- ... and there is more!
     --  Check out: https://github.com/echasnovski/mini.nvim
   end,
