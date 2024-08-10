@@ -54,6 +54,10 @@ vim.keymap.set('n', '<C-u>', '<C-u>zz', { desc = 'Keep cursor in middle when jum
 vim.keymap.set('n', 'n', 'nzzzv')
 vim.keymap.set('n', 'N', 'Nzzzv')
 
+-- netrw, :Ex, :Explore, :Lexplore commands
+vim.keymap.set('n', '\\', ':Lexplore <CR>', { desc = 'Toggle netrw / Explore window' })
+vim.keymap.set('n', '|', ':Lexplore %:p:h <CR>', { desc = 'Toggle netrw / Explore window in current file directory' })
+
 -- [[ Basic Autocommands ]]
 --  See `:help lua-guide-autocommands`
 
