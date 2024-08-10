@@ -167,8 +167,7 @@ return { -- LSP Configuration & Plugins
       -- gopls = {},
 
       -- Python
-      pyright = {},
-      ruff_lsp = {},
+      -- pyright = {},
       ruff = {},
 
       dockerls = {},
