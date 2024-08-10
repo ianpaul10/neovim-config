@@ -54,6 +54,8 @@ return {
       -- Toggles
       map('n', '<leader>gtb', gitsigns.toggle_current_line_blame, { desc = '[G]it [T]oggle show [b]lame line' })
       map('n', '<leader>gtd', gitsigns.toggle_deleted, { desc = '[G]it [T]oggle show [D]eleted' })
+      map('n', '<leader>gn', gitsigns.nav_hunk 'next', { desc = '[G]it go to [n]ext hunk' })
+      map('n', '<leader>gp', gitsigns.nav_hunk 'prev', { desc = '[G]it go to [p]revious hunk' })
     end,
   },
 }
