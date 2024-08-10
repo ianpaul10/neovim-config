@@ -32,6 +32,8 @@ vim.keymap.set('n', '<C-h>', '<C-w><C-h>', { desc = 'Move focus to the left wind
 vim.keymap.set('n', '<C-l>', '<C-w><C-l>', { desc = 'Move focus to the right window' })
 vim.keymap.set('n', '<C-j>', '<C-w><C-j>', { desc = 'Move focus to the lower window' })
 vim.keymap.set('n', '<C-k>', '<C-w><C-k>', { desc = 'Move focus to the upper window' })
+-- smart vertical window split
+vim.keymap.set('n', '<C-w><C-v>', '<C-w>v<C-w><C-h><C-6><C-w><C-l>', { desc = 'Smart vertical window split' })
 
 -- [[ Shortcuts for switching between buffers ]]
 vim.keymap.set('n', 'gn', ':bnext<CR>', { desc = '[G]o to the [N]ext buffer (i.e. file)' })
