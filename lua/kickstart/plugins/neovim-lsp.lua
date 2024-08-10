@@ -168,6 +168,7 @@ return { -- LSP Configuration & Plugins
 
       -- Python
       -- pyright = {},
+      basedpyright = {},
       ruff = {},
 
       dockerls = {},
