@@ -167,8 +167,8 @@ return { -- LSP Configuration & Plugins
       -- gopls = {},
 
       -- Python
-      -- pyright = {},
-      basedpyright = {},
+      pyright = {},
+      -- basedpyright = {}, -- NOTE: Need to figure out config for this (or another LSP like pylyzer), right now they're too noisy
       ruff = {},
 
       dockerls = {},
