@@ -59,9 +59,10 @@ return { -- Collection of various small independent plugins/modules
     end
     vim.keymap.set('n', '<Leader>ww', write_as_cwd, { desc = '[W]rite [W]orkspace to a session' })
 
-    require('mini.starter').setup { header = header_art_2 }
+    require('mini.starter').setup { header = header_art_2, footer = '' }
     require('mini.pairs').setup()
     require('mini.jump').setup()
+    -- require('mini.notify').setup()
     -- ... and there is more!
     --  Check out: https://github.com/echasnovski/mini.nvim
   end,
