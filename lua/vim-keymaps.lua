@@ -36,8 +36,8 @@ vim.keymap.set('n', '<C-k>', '<C-w><C-k>', { desc = 'Move focus to the upper win
 vim.keymap.set('n', '<C-w><C-v>', '<C-w>v<C-w><C-h><C-6><C-w><C-l>', { desc = 'Smart vertical window split' })
 
 -- [[ Shortcuts for switching between buffers ]]
-vim.keymap.set('n', 'gn', ':bnext<CR>', { desc = '[G]o to the [N]ext buffer (i.e. file)' })
-vim.keymap.set('n', 'gp', ':bprevious<CR>', { desc = '[G]o to the [P]revious buffer (i.e. file)' })
+vim.keymap.set('n', 'g0', ':bnext<CR>', { desc = '[G]o to the next buffer (i.e. file)' })
+vim.keymap.set('n', 'g9', ':bprevious<CR>', { desc = '[G]o to the previous buffer (i.e. file)' })
 vim.keymap.set('n', 'gq', ':bdelete<CR>', { desc = '[Q]uit the current buffer (i.e. file)' })
 
 -- Remove keymap of s for vim in favour of mini.nvim mini.surround
