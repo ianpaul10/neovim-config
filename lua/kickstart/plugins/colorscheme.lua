@@ -15,7 +15,9 @@ return {
       underline = true,
       transparent_background = false,
     }
+
     vim.cmd.colorscheme 'night-owl'
+
     -- vim.cmd.colorscheme 'slate' -- If you want to use the default slate colorscheme, you can uncomment this line.
   end,
 }
