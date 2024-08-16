@@ -9,7 +9,7 @@ return {
   config = function()
     -- load the colorscheme here
     require('night-owl').setup {
-      italics = false,
+      italics = false, -- only diff from default
       bold = true,
       undercurl = true,
       underline = true,
@@ -17,11 +17,13 @@ return {
     }
 
     vim.cmd.colorscheme 'night-owl'
+    -- also setting borders around windows in vim-options.lua
 
     -- vim.cmd.colorscheme 'slate' -- If you want to use the default slate colorscheme, you can uncomment this line.
   end,
 }
 
+-- Supposed to be good for colourblind people. I didn't find it high-contrast enough. Night owl is where it's at.
 -- return {
 --   'EdenEast/nightfox.nvim',
 --   lazy = false,
