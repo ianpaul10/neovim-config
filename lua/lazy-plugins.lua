@@ -39,6 +39,7 @@ require('lazy').setup({
   require 'custom.plugins.undo-tree',
   require 'custom.plugins.fugitive',
   require 'custom.plugins.supermaven',
+  require 'custom.plugins.groq-and-roll',
 }, {
   ui = {
     -- If you are using a Nerd Font: set icons to an empty table which will use the
