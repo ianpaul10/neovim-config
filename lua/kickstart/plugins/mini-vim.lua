@@ -62,6 +62,17 @@ return { -- Collection of various small independent plugins/modules
     require('mini.starter').setup { header = header_art_2, footer = '' }
     require('mini.pairs').setup()
     require('mini.jump').setup()
+
+    require('mini.files').setup()
+    local open_file_explorer = function()
+      local path = vim.fn.getcwd()
+      local use_latest = true
+      local opts = {}
+      MiniFiles.reset()
+      MiniFiles.open(path, use_latest, opts)
+    end
+    vim.keymap.set('n', '-', open_file_explorer, { desc = 'Open mini file explorer' })
+
     -- require('mini.notify').setup()
     -- ... and there is more!
     --  Check out: https://github.com/echasnovski/mini.nvim
