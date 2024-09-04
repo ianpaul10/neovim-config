@@ -24,7 +24,7 @@ require('lazy').setup({
   require 'kickstart.plugins.debug',
   require 'kickstart.plugins.indent_line',
   -- require 'kickstart.plugins.lint',
-  -- require 'kickstart.plugins.autopairs',
+  -- require 'kickstart.plugins.autopairs', -- using mini.pairs instead
   -- require 'kickstart.plugins.neo-tree', -- use :Ex and :Lexplore instead
   require 'kickstart.plugins.gitsigns',
 
@@ -40,6 +40,7 @@ require('lazy').setup({
   require 'custom.plugins.fugitive',
   require 'custom.plugins.supermaven',
   require 'custom.plugins.groq-and-roll',
+  require 'custom.plugins.avante',
 }, {
   ui = {
     -- If you are using a Nerd Font: set icons to an empty table which will use the
