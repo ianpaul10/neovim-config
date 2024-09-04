@@ -11,40 +11,40 @@ return {
   end,
   keys = {
     {
-      '<leader>as',
+      '<leader>zs',
       function()
         require('harpoon'):list():append()
       end,
-      desc = 'h[A]rpoon [S]ave file',
+      desc = 'harpoon [S]ave file',
     },
     {
-      '<leader>aa',
+      '<leader>zz',
       function()
         local harpoon = require 'harpoon'
         harpoon.ui:toggle_quick_menu(harpoon:list())
       end,
-      desc = 'h[A]rpoon quick menu [A]',
+      desc = 'harpoon quick menu [z]',
     },
     {
-      '<leader>an',
+      '<leader>zn',
       function()
         require('harpoon'):list():next()
       end,
-      desc = 'h[A]rpoon [N]ext file',
+      desc = 'harpoon [N]ext file',
     },
     {
-      '<leader>ap',
+      '<leader>zp',
       function()
         require('harpoon'):list():prev()
       end,
-      desc = 'h[A]rpoon [P]revious file',
+      desc = 'harpoon [P]revious file',
     },
     {
-      '<leader>aqa',
+      '<leader>zqa',
       function()
         require('harpoon'):list():clear()
       end,
-      desc = 'h[A]rpoon [Q]uit [A]ll files',
+      desc = 'harpoon [Q]uit [A]ll files',
     },
     -- NOTE: this should just be a for loop, but aint nobody got time for that
     -- Also seems like there are only 8 slots in the menu, so limiting to 8 for now
@@ -56,11 +56,11 @@ return {
       desc = 'harpoon to file 1',
     },
     {
-      '<leader>aq1',
+      '<leader>zq1',
       function()
         require('harpoon'):list():remove_at(1)
       end,
-      desc = 'h[A]rpoon [Q]uit file [1]',
+      desc = 'harpoon [Q]uit file [1]',
     },
     {
       '<leader>2',
@@ -70,11 +70,11 @@ return {
       desc = 'harpoon to file 2',
     },
     {
-      '<leader>aq2',
+      '<leader>zq2',
       function()
         require('harpoon'):list():remove_at(2)
       end,
-      desc = 'h[A]rpoon [Q]uit file [2]',
+      desc = 'harpoon [Q]uit file [2]',
     },
     {
       '<leader>3',
@@ -84,11 +84,11 @@ return {
       desc = 'harpoon to file 3',
     },
     {
-      '<leader>aq3',
+      '<leader>zq3',
       function()
         require('harpoon'):list():remove_at(3)
       end,
-      desc = 'h[A]rpoon [Q]uit file [3]',
+      desc = 'harpoon [Q]uit file [3]',
     },
     {
       '<leader>4',
@@ -98,11 +98,11 @@ return {
       desc = 'harpoon to file 4',
     },
     {
-      '<leader>aq4',
+      '<leader>zq4',
       function()
         require('harpoon'):list():remove_at(4)
       end,
-      desc = 'h[A]rpoon [Q]uit file [4]',
+      desc = 'harpoon [Q]uit file [4]',
     },
     {
       '<leader>5',
@@ -112,11 +112,11 @@ return {
       desc = 'harpoon to file 5',
     },
     {
-      '<leader>aq5',
+      '<leader>zq5',
       function()
         require('harpoon'):list():remove_at(5)
       end,
-      desc = 'h[A]rpoon [Q]uit file [5]',
+      desc = 'harpoon [Q]uit file [5]',
     },
     {
       '<leader>6',
@@ -126,11 +126,11 @@ return {
       desc = 'harpoon to file 6',
     },
     {
-      '<leader>aq6',
+      '<leader>zq6',
       function()
         require('harpoon'):list():remove_at(6)
       end,
-      desc = 'h[A]rpoon [Q]uit file [6]',
+      desc = 'harpoon [Q]uit file [6]',
     },
     {
       '<leader>7',
@@ -140,11 +140,11 @@ return {
       desc = 'harpoon to file 7',
     },
     {
-      '<leader>aq7',
+      '<leader>zq7',
       function()
         require('harpoon'):list():remove_at(7)
       end,
-      desc = 'h[A]rpoon [Q]uit file [7]',
+      desc = 'harpoon [Q]uit file [7]',
     },
     {
       '<leader>8',
@@ -154,11 +154,11 @@ return {
       desc = 'harpoon to file 8',
     },
     {
-      '<leader>aq8',
+      '<leader>zq8',
       function()
         require('harpoon'):list():remove_at(8)
       end,
-      desc = 'h[A]rpoon [Q]uit file [8]',
+      desc = 'harpoon [Q]uit file [8]',
     },
   },
 }
