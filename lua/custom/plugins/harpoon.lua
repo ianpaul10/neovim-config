@@ -13,7 +13,7 @@ return {
     {
       '<leader>zs',
       function()
-        require('harpoon'):list():append()
+        require('harpoon'):list():add()
       end,
       desc = 'harpoon [S]ave file',
     },
