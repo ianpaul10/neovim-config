@@ -35,13 +35,14 @@ return {
         },
       },
     },
-    {
-      -- Make sure to set this up properly if you have lazy=true
-      'MeanderingProgrammer/render-markdown.nvim',
-      opts = {
-        file_types = { 'markdown', 'Avante' },
-      },
-      ft = { 'markdown', 'Avante' },
-    },
+    -- NOTE: I don't love the markdown rendering preview. Raw markdown is better IMO
+    -- {
+    --   -- Make sure to set this up properly if you have lazy=true
+    --   'MeanderingProgrammer/render-markdown.nvim',
+    --   opts = {
+    --     file_types = { 'markdown', 'Avante' },
+    --   },
+    --   ft = { 'markdown', 'Avante' },
+    -- },
   },
 }
