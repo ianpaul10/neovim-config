@@ -49,7 +49,7 @@ return { -- Collection of various small independent plugins/modules
       return '%2l:%-2v'
     end
 
-    require('mini.tabline').setup()
+    -- require('mini.tabline').setup()
     require('mini.icons').setup()
 
     require('mini.sessions').setup { autoread = false, autowrite = true, directory = '~/.neovim_sessions' }
