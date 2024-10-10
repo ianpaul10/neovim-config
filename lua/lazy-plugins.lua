@@ -41,6 +41,7 @@ require('lazy').setup({
   require 'custom.plugins.supermaven',
   require 'custom.plugins.groq-and-roll',
   require 'custom.plugins.avante',
+  require 'custom.plugins.comments', -- specifically for ts/tsx comments
   -- require 'custom.plugins.oil',
 }, {
   ui = {
