@@ -1,3 +1,25 @@
+-- Telescope is a fuzzy finder that comes with a lot of different things that
+-- it can fuzzy find! It's more than just a "file finder", it can search
+-- many different aspects of Neovim, your workspace, LSP, and more!
+--
+-- The easiest way to use Telescope, is to start by doing something like:
+--  :Telescope help_tags
+--
+-- After running this command, a window will open up and you're able to
+-- type in the prompt window. You'll see a list of `help_tags` options and
+-- a corresponding preview of the help.
+--
+-- Two important keymaps to use while in Telescope are:
+--  - Insert mode: <c-/>
+--  - Normal mode: ?
+--
+-- This opens a window that shows you all of the keymaps for the current
+-- Telescope picker. This is really useful to discover what Telescope can
+-- do as well as how to actually do it!
+
+-- [[ Configure Telescope ]]
+-- See `:help telescope` and `:help telescope.setup()`
+
 return { -- Fuzzy Finder (files, lsp, etc)
   'nvim-telescope/telescope.nvim',
   event = 'VimEnter',
@@ -24,27 +46,6 @@ return { -- Fuzzy Finder (files, lsp, etc)
     -- { 'echasnovski/mini.icons', enabled = vim.g.have_nerd_font }, -- mini.icons don't seem to work
   },
   config = function()
-    -- Telescope is a fuzzy finder that comes with a lot of different things that
-    -- it can fuzzy find! It's more than just a "file finder", it can search
-    -- many different aspects of Neovim, your workspace, LSP, and more!
-    --
-    -- The easiest way to use Telescope, is to start by doing something like:
-    --  :Telescope help_tags
-    --
-    -- After running this command, a window will open up and you're able to
-    -- type in the prompt window. You'll see a list of `help_tags` options and
-    -- a corresponding preview of the help.
-    --
-    -- Two important keymaps to use while in Telescope are:
-    --  - Insert mode: <c-/>
-    --  - Normal mode: ?
-    --
-    -- This opens a window that shows you all of the keymaps for the current
-    -- Telescope picker. This is really useful to discover what Telescope can
-    -- do as well as how to actually do it!
-
-    -- [[ Configure Telescope ]]
-    -- See `:help telescope` and `:help telescope.setup()`
     require('telescope').setup {
       -- You can put your default mappings / updates / etc. in here
       --  All the info you're looking for is in `:help telescope.setup()`
@@ -90,6 +91,13 @@ return { -- Fuzzy Finder (files, lsp, etc)
     --     hidden = true,
     --   }
     -- end, { desc = '[S]earch [F]ile names (ignore case)' })
+
+    -- NOTE: grep in the current buffer's directory
+    vim.keymap.set('n', '<leader>sG', function()
+      builtin.live_grep {
+        cwd = require('telescope.utils').buffer_dir(),
+      }
+    end, { desc = '[S]earch [G]rep in current directory' })
 
     -- Slightly advanced example of overriding default behavior and theme
     vim.keymap.set('n', '<leader>/', function()
