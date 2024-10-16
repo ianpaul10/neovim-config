@@ -3,7 +3,16 @@
 return {
   'nvim-treesitter/nvim-treesitter',
   dependencies = {
-    'nvim-treesitter/nvim-treesitter-context',
+    {
+      -- NOTE: Treesitter "context" i.e. Freeze the top of the current function/block at the top of the window if it goes beyond the current window
+      -- Only freeze a single line for each level of context, for a total of 5 lines of context (if it goes 5 contexts deep)
+      'nvim-treesitter/nvim-treesitter-context',
+      opts = {
+        enable = true,
+        max_lines = 5,
+        multiline_threshold = 1,
+      },
+    },
   },
   build = ':TSUpdate',
   opts = {
