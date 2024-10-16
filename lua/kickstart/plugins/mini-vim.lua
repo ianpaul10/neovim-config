@@ -64,19 +64,21 @@ return { -- Collection of various small independent plugins/modules
     require('mini.jump').setup()
 
     require('mini.files').setup()
-    local minifiles_toggle = function(...)
+    local minifiles_toggle = function(use_cur_buffer)
       if not MiniFiles.close() then
-        MiniFiles.open(...)
+        if use_cur_buffer then
+          MiniFiles.open(vim.api.nvim_buf_get_name(0))
+        else
+          MiniFiles.open()
+        end
       end
     end
-    local open_file_explorer = function()
-      local path = vim.fn.getcwd()
-      local use_latest = true
-      local opts = {}
-      MiniFiles.reset()
-      MiniFiles.open(path, use_latest, opts)
-    end
-    vim.keymap.set('n', '-', minifiles_toggle, { desc = 'Open mini file explorer' })
+    vim.keymap.set('n', '-', function()
+      minifiles_toggle(false)
+    end, { desc = 'Open mini file explorer' })
+    vim.keymap.set('n', '<Leader>-', function()
+      minifiles_toggle(true)
+    end, { desc = 'Open mini file explorer in current buffer' })
 
     -- require('mini.notify').setup()
     -- ... and there is more!
