@@ -39,7 +39,7 @@ require('lazy').setup({
   require 'custom.plugins.undo-tree',
   require 'custom.plugins.fugitive',
   require 'custom.plugins.supermaven',
-  require 'custom.plugins.groq-and-roll',
+  -- require 'custom.plugins.groq-and-roll', -- haven't used this in a while, using avante and aider instead
   require 'custom.plugins.avante',
   require 'custom.plugins.comments', -- specifically for ts/tsx comments
 }, {
