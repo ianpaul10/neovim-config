@@ -35,14 +35,13 @@ require('lazy').setup({
   'ryanoasis/vim-devicons',
 
   -- NOTE: Custom plugins
-  require 'custom.plugins.harpoon',
+  require 'custom.plugins.arrow',
   require 'custom.plugins.undo-tree',
   require 'custom.plugins.fugitive',
   require 'custom.plugins.supermaven',
   require 'custom.plugins.groq-and-roll',
   require 'custom.plugins.avante',
   require 'custom.plugins.comments', -- specifically for ts/tsx comments
-  -- require 'custom.plugins.oil',
 }, {
   ui = {
     -- If you are using a Nerd Font: set icons to an empty table which will use the
