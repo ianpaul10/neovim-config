@@ -54,7 +54,7 @@ return { -- Collection of various small independent plugins/modules
 
     require('mini.sessions').setup { autoread = false, autowrite = true, directory = '~/.neovim_sessions' }
     local write_as_cwd = function()
-      local session_name = vim.fn.getcwd():gsub('/Users/ianpaul/', ''):gsub('/', '_'):gsub('%.', '')
+      local session_name = vim.fn.fnamemodify(vim.fn.getcwd(), ':t'):gsub('/$', ''):gsub('%.', '')
       MiniSessions.write(session_name)
     end
     vim.keymap.set('n', '<Leader>ww', write_as_cwd, { desc = '[W]rite [W]orkspace to a session' })
