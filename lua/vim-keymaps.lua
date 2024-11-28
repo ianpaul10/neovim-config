@@ -61,6 +61,12 @@ vim.keymap.set('n', 'N', 'Nzzzv')
 vim.keymap.set('n', '\\', ':Lexplore <CR>', { desc = 'Toggle netrw / Explore window' })
 vim.keymap.set('n', '|', ':Lexplore %:p:h <CR>', { desc = 'Toggle netrw / Explore window in current file directory' })
 
+-- Close all buffers except for currently opened one
+--
+-- - `:%bd`: Deletes all buffers.
+-- - `:e#`: Opens the most recent buffer, which is the one you want to keep.
+vim.keymap.set('n', '<leader>wd', ':%bd | :e# <CR>', { desc = '[D]elete all buffers except currently opened one' })
+
 -- [[ Basic Autocommands ]]
 --  See `:help lua-guide-autocommands`
 
